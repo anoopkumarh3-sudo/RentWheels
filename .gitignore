@@ -1,0 +1,33 @@
+# Root .gitignore for RentWheels
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.cache/
+
+# Java & Maven
+target/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE & Editor files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Environment & Local Secrets
+.env
+.env.local
+.env.*.local
+application-local.properties
+application-*.properties
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+

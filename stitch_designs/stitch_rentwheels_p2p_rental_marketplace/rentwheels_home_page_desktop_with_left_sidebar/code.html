@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-container":"#605b7d","surface-dim":"#dcd8e5","on-primary-fixed-variant":"#5a00c6","surface-variant":"#e5e0ee","background":"#fcf8ff","tertiary-fixed":"#ecdcff","secondary-fixed-dim":"#c8c2e9","surface-canvas":"#F8FAFC","secondary-fixed":"#e5deff","error-container":"#ffdad6","on-primary-fixed":"#25005a","inverse-primary":"#d2bbff","tertiary-fixed-dim":"#d1beee","lavender-subtle":"#EDE9FE","status-success":"#10B981","secondary-container":"#dcd5fd","on-tertiary":"#ffffff","surface-container":"#f0ecf9","outline-variant":"#ccc3d8","surface-bright":"#fcf8ff","on-tertiary-fixed":"#221439","inverse-on-surface":"#f3effc","surface-container-highest":"#e5e0ee","electric-violet-hover":"#6D28D9","on-surface":"#1c1a24","border-purple-tint":"#E9E5F5","surface-container-lowest":"#ffffff","tertiary-container":"#6f5f89","primary":"#630ed4","on-tertiary-container":"#eee0ff","surface-card":"#FFFFFF","tertiary":"#56476f","border-subtle":"#E2E8F0","outline":"#7b7487","secondary":"#5f5a7c","on-error-container":"#93000a","surface-tint":"#732ee4","surface":"#fcf8ff","surface-container-low":"#f6f1ff","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#4e4067","on-secondary-fixed":"#1b1735","primary-fixed":"#eaddff","primary-container":"#7c3aed","primary-fixed-dim":"#d2bbff","on-surface-variant":"#4a4455","on-background":"#1c1a24","on-primary-container":"#ede0ff","electric-violet-bright":"#8B5CF6","surface-container-high":"#ebe6f4","status-alert":"#E11D48","on-error":"#ffffff","error":"#ba1a1a","inverse-surface":"#312f39","on-primary":"#ffffff","on-secondary-fixed-variant":"#474363"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","margin-sm":"1rem","gutter-sm":"1rem","space-xl":"2.5rem","margin":"2rem","margin-lg":"4rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[250px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs pt-space-xs"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_8px_-2px_rgba(30,16,53,0.04),0_1px_3px_0_rgba(124,58,237,0.03)]"><span class="material-symbols-outlined text-[24px]">directions_car</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-extrabold tracking-tight">RentWheels</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Mobility Club</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[0_4px_14px_rgba(124,58,237,0.35)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary font-bold shadow-[0_4px_14px_rgba(124,58,237,0.35)]" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="explore-vehicles" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span>Explore Vehicles</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="list-your-vehicle" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>List Your Vehicle</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="my-bookings" href="#"><span class="material-symbols-outlined text-[20px]">calendar_today</span><span>My Bookings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="rental-requests" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span>Rental Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span>My Profile</span></a></nav></div><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between shadow-[0_2px_8px_-2px_rgba(30,16,53,0.04)]"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-9 h-9 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface truncate">Alex Morgan</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Verified Host &amp; Driver</span></div></div><a class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface transition-colors flex-shrink-0" data-path="sign-out" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></aside><div class="pl-[250px] min-h-screen flex flex-col justify-between"><main class="w-full px-margin-lg pt-margin pb-space-xl flex-1"><div class="flex flex-col w-full">
+<!-- TOP UTILITY BAR -->
+<div class="w-full flex items-center justify-between pb-space-lg">
+<div class="flex items-center gap-space-md flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-outline" placeholder="Search by model, city, host, or zip code..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant font-label-md text-label-md whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px] text-status-success" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-semibold text-on-surface">Verified Marketplace</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="hidden lg:flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span class="font-bold text-on-surface">Tuesday, Oct 24</span>
+</div>
+<button class="relative w-11 h-11 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface hover:bg-lavender-subtle transition-colors group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">notifications</span>
+<span class="absolute 1 top-2 right-2 w-2.5 h-2.5 rounded-full bg-status-alert ring-2 ring-surface-container-lowest"></span>
+<span class="sr-only">2 new alerts</span>
+</button>
+<div class="w-11 h-11 rounded-lg bg-lavender-subtle flex items-center justify-center text-primary font-bold text-label-lg shadow-sm">
+        AM
+      </div>
+</div>
+</div>
+<!-- HERO SECTION WITH INTEGRATED CONSOLE -->
+<section class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest mb-space-xl">
+<!-- Visual Ambient Canvas -->
+<div class="relative h-[340px] w-full overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Ultra-sleek metallic violet electric sports sedan parked next to a matte black performance motorcycle on wet city pavement at dusk. Deep twilight atmosphere, purple neon rim lighting reflections, futuristic architectural backdrop with glowing glass textures, executive and dynamic automotive lifestyle shot." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC07UUdr4QBA364D9BYHtQvsX18mbrgUX1z5yrv_oshnI1cfTBi-HaxMof7cWDcAalUFyYiBfMExc3ErrgmP7sG81jUOz2PKQ_uuW4EVP0_w6zRq95PJqo5kcPChSx15D50neKXgNPi7qR1FFzH3fnexg9qRPDy4eL_ytuBa8Shd6iBb8W_4xy5BaKEBf8Q6ki-TPFxwqUO7WuYttcmcHR8qFx2Qxp_QuBv2CtgoPsy')">
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/65 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+<div class="absolute inset-0 p-space-xl flex flex-col justify-center max-w-2xl text-on-primary">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-primary/30 backdrop-blur-md text-primary-fixed w-max mb-space-sm">
+<span class="material-symbols-outlined text-[16px] text-electric-violet-bright">bolt</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Premium P2P Mobility</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg font-extrabold text-on-primary tracking-tight leading-tight">
+          Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary-fixed to-electric-violet-bright">RentWheels</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-variant mt-space-xs max-w-xl">
+          Find your perfect ride or turn your vehicle into an earning opportunity with complete peace of mind.
+        </p>
+</div>
+</div>
+<!-- Booking Console Overlap -->
+<div class="p-space-lg md:p-space-xl -mt-10 relative z-10 bg-surface-container-lowest rounded-2xl mx-space-md shadow-2xl">
+<!-- Tabs -->
+<div class="flex items-center gap-space-xs pb-space-md" id="categoryTabGroup">
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-primary text-on-primary shadow-md" onclick="setCategoryTab(this)">
+<span class="material-symbols-outlined text-[18px]">commute</span>
+<span>All Fleet</span>
+</button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container hover:bg-lavender-subtle text-on-surface-variant" onclick="setCategoryTab(this)">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+<span>Cars</span>
+</button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container hover:bg-lavender-subtle text-on-surface-variant" onclick="setCategoryTab(this)">
+<span class="material-symbols-outlined text-[18px]">two_wheeler</span>
+<span>Bikes</span>
+</button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container hover:bg-lavender-subtle text-on-surface-variant" onclick="setCategoryTab(this)">
+<span class="material-symbols-outlined text-[18px]">electric_scooter</span>
+<span>Scooters</span>
+</button>
+</div>
+<!-- Search Inputs Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Location -->
+<div class="md:col-span-4 bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold block mb-1">Pickup Location</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<input class="w-full bg-transparent font-title-md text-title-md text-on-surface focus:outline-none" type="text" value="San Francisco, CA"/>
+</div>
+</div>
+<!-- Start Date -->
+<div class="md:col-span-3 bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Rental Start</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">event_available</span>
+<input class="w-full bg-transparent font-label-lg text-label-lg text-on-surface focus:outline-none" type="text" value="Oct 26, 2025 • 10:00 AM"/>
+</div>
+</div>
+<!-- End Date -->
+<div class="md:col-span-3 bg-surface-container-low p-space-sm rounded-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block mb-1">Rental End</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">event_busy</span>
+<input class="w-full bg-transparent font-label-lg text-label-lg text-on-surface focus:outline-none" type="text" value="Oct 29, 2025 • 06:00 PM"/>
+</div>
+</div>
+<!-- Primary CTA -->
+<div class="md:col-span-2">
+<button class="w-full h-[58px] bg-primary-container hover:bg-electric-violet-hover text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg transition-all transform active:scale-95">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Search</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter Chips -->
+<div class="flex flex-wrap items-center gap-space-xs mt-space-md pt-space-sm border-t border-border-purple-tint">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold mr-2">Quick Filters:</span>
+<button class="px-space-md py-1.5 rounded-full bg-lavender-subtle text-primary font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[16px]">lock_open</span> Instant Unlock
+        </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-lavender-subtle text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span> Host Delivery
+        </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-lavender-subtle text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">bolt</span> Electric &amp; Hybrid
+        </button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-lavender-subtle text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]">payments</span> Under ₹2,500/day
+        </button>
+</div>
+</div>
+</section>
+<!-- POPULAR CATEGORIES -->
+<section class="w-full mb-space-xl">
+<div class="flex items-end justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Curated Fleets</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Popular Categories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Browse verified vehicles tailored for every journey</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Category 1: Cars -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative w-full h-52 rounded-xl overflow-hidden mb-space-md">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Sleek deep charcoal metallic electric luxury sports car positioned in modern architectural showroom with ambient purple LED underglow and glossy floor reflections." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXaJXFnoZbA5UccQKditQuo62gELGCAV6NBo6Zf_CQOPJkPo3L2ec9VD8glrG9R126ActeRUT8DPrEdFUw15-e4BwYP0FTlp0xB7Fu3Y0mfYLFbdwixGOBorSDpvymoCd06WwLBso8XplEovQO-iPV8Cq68_-cqUQfyuQ2DI8_8ZGumUBCti1L2AghJm8Nr_isfOPHpN3YrETS4F15eZkLMdv60pkBBw8b78i1Q-qN')"></div>
+<div class="absolute top-space-sm right-space-sm px-space-sm py-1 rounded-full bg-on-surface/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            1,240+ available
+          </div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">Cars</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Sedans, SUVs, Coupes &amp; Performance Electric</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-lavender-subtle group-hover:bg-primary text-primary group-hover:text-on-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Category 2: Bikes -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative w-full h-52 rounded-xl overflow-hidden mb-space-md">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="High performance modern sports motorcycle with exposed trellis frame and carbon accents, studio lit with dramatic violet backlighting on a clean dark slate floor." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhWX-S_NX8tYo_NLzrCpLJKZJI5diZAa4n8Z34OuVxI_ZeLyK8magJ7BG2U3O5GpT1npLAdmZ-NqrYumub1o7E0yhQW-c3prZmohMzLcVpgCwe5iFArwYtusHh9XY5CURZ7fFRtd7rg-dpTm7RGGSFXbrjqZc5vP0Q7MMNRrd9AOvmC_tf5P2qKVI4vbe7bPGRi-Oowxd6imevfK7N1Q0YvY1Ch3NxlnLZPmonQntZ')"></div>
+<div class="absolute top-space-sm right-space-sm px-space-sm py-1 rounded-full bg-on-surface/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            480+ available
+          </div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">Bikes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Sport, Cruisers, Touring &amp; Dual-Sport Thrills</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-lavender-subtle group-hover:bg-primary text-primary group-hover:text-on-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Category 3: Scooters -->
+<div class="group relative rounded-2xl bg-surface-container-lowest p-space-md shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative w-full h-52 rounded-xl overflow-hidden mb-space-md">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic minimalist electric urban maxi-scooter with clean white and violet detailing parked by a designer coffee house in a modern city promenade." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxfGW9aAR3mQu1-wP_cUQnhzbC6wYAA0qjnsIT-nxCnv3IhyaSy78p9o6PsxCe46kgwz9NmqtO7gGGynONrXonc7wMdGrz8H15ioBPXylQMwNYotHCPQGvqYj_qaMbtlG71vRSrMINQ_gmLgoBXwxsQc8sWFmiTZX6glWeXxRKlUEUzkx1rgWgTypOA18jUyyyWra_BKVK9XoUcqAMi8cprEAg_NEZB_8lWS_T6dOi')"></div>
+<div class="absolute top-space-sm right-space-sm px-space-sm py-1 rounded-full bg-on-surface/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+            310+ available
+          </div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold group-hover:text-primary transition-colors">Scooters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Electric &amp; Urban Commuters for Agile City Trips</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-lavender-subtle group-hover:bg-primary text-primary group-hover:text-on-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED VEHICLES GRID -->
+<section class="w-full mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Top Verified Units</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Featured Vehicles</h2>
+</div>
+<a class="font-label-lg text-label-lg text-primary hover:text-electric-violet-hover font-bold flex items-center gap-1 group" href="#">
+<span>View All (2,000+)</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Vehicle 1: Lucid Air Grand Touring -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Champagne platinum Lucid Air Grand Touring sedan driving smoothly along a coastal highway with violet twilight sky reflections and razor-thin LED light blade glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAv997sMXsA_TjL2Rp7gz1l7Fqerj-9RWwucQ3th5Ytjdz2N5buQzEaHQqsQWSr6QbI5tzhTZ-z0KDQivFVCR5jLneFL-Cazfd3xqJP8TAaaN0ZQP0apcJvxAIDYiHYZaQQ8QWIXQLmpCmyX47rr9P_uNIRmTcYxgoEqMuIcEA6rjGKT-jFIpOCBpo4fVnVDrUNvqretkv8RdFkSLTHotguWBuo2mwtondzqMfYG8k2')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Instant Unlock
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Cars • Luxury EV</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.98</span>
+<span class="text-on-surface-variant">(124)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">Lucid Air Grand Touring</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">Downtown Financial District, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹4,499<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹550/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+<!-- Vehicle 2: Ducati Panigale V4 S -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Ducati Panigale V4 S superbikes with fiery crimson fairings and gold Ohlins suspension leaning gracefully in an architectural tunnel with subtle lavender edge-lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCluQLyAXqs0OHhinvXlnTvT8aogN4TAP1NeFuoOx3AU0lYoVxZAi6MP-FrKmT8BLLHUpHpiRf-hSiXFb8v5zOwXkfVeSkHrbytApxbjNMyDYE5iGJI5EeY972-M1Ys6hxnW6g4tCZmGCQc7dlD-2e0W8iP46ladGbuqOcakUabFPXGxYFgg4G5VZmahB8S5c32-yUhpyvQluY70QTJaq5bB2Ks8vfvvC0LoTwYOoDC')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Top Host
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Bikes • Sportbike</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.95</span>
+<span class="text-on-surface-variant">(88)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">Ducati Panigale V4 S</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">Marina District, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹5,200<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹650/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+<!-- Vehicle 3: Porsche Taycan 4S Cross -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Porsche Taycan 4S Cross Turismo in deep gentian blue metallic parked at a scenic coastal lookout in northern California with foggy dusk horizon." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUphk_KLqli3xOxa-k7zzLrgCWIpi_Yhpo3dEAFDBnDWDfUBpVoVnhPHpug-1K0EHlmSWT9mKKdTvpsH_bl37RID_RaoUpCCVlliSZoavtW_mZjPEbTMBpO10F0wmbSS4Qf4DegtWUOPAV5X1yi5SSuU6jNq3ZgESHAvpib4gLRMGFrsvlSkTdF0HoTAQUmV6PVd4N7s1ofbF3h_jGaMj8WjfNSXj1KHP86E8tj7Vh')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Instant Unlock
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Cars • Performance EV</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.99</span>
+<span class="text-on-surface-variant">(210)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">Porsche Taycan 4S Cross</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">flight_takeoff</span>
+<span class="truncate">SFO Airport Delivery</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹5,800<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹750/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+<!-- Vehicle 4: BMW CE 04 Electric Scooter -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="BMW CE 04 avant-garde electric maxi scooter in futuristic grey and orange accents parked outside a minimalist glass office tower at twilight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAa6dHfB52twAcoCwEGVMiuo50_v1v8e_j79EF1YD6lyZ457LllZL8s8jOAujauV1Z043G7RsUe8FiGl8D5EnEMUDqex2kTcVBzYD_7mXuI9Br0ZvltTR2ZvEIOOtcxSEG_fIomhhRmEPTUzmczNotOEcWczmxmyrWrPnqA02_jSCRT8MsLzzU7fla_eGeXjW-QQfR3uo8FZWdw1b0NYHeSQw8hflVT8DRZIXhs_X_X')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-lavender-subtle text-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">eco</span> Eco-Friendly
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Scooters • Urban EV</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.92</span>
+<span class="text-on-surface-variant">(54)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">BMW CE 04 Electric Scooter</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">SoMa Tech Corridor, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹1,999<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹250/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- HOST PROMOTIONAL BANNER & ESTIMATOR -->
+<section class="w-full rounded-2xl bg-gradient-to-br from-on-surface via-inverse-surface to-on-surface text-on-primary p-space-xl mb-space-xl shadow-xl relative overflow-hidden">
+<!-- Atmospheric subtle glow -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/40 backdrop-blur-md text-primary-fixed w-max">
+<span class="material-symbols-outlined text-[16px]">monetization_on</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Host Partnership</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl font-extrabold tracking-tight">Your Vehicle Can Earn For You.</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+          List your vehicle and earn money by sharing it with trusted, verified drivers in your city. Full insurance coverage included.
+        </p>
+<!-- Protection highlights -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md my-space-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-violet-bright text-[22px]">verified_user</span>
+<div>
+<span class="font-label-md text-label-md font-bold block">₹1 Crore</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Liability Insurance</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-violet-bright text-[22px]">badge</span>
+<div>
+<span class="font-label-md text-label-md font-bold block">100% Verified</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Background Checks</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-electric-violet-bright text-[22px]">phonelink_ring</span>
+<div>
+<span class="font-label-md text-label-md font-bold block">Keyless Go</span>
+<span class="font-body-sm text-body-sm text-surface-variant">Contactless Unlock</span>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="h-12 px-space-xl rounded-lg bg-surface-container-lowest hover:bg-lavender-subtle text-primary font-label-lg text-label-lg font-bold shadow-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>List Your Vehicle</span>
+</button>
+</div>
+</div>
+<!-- Estimator Box -->
+<div class="lg:col-span-5 bg-surface-container-lowest text-on-surface p-space-lg rounded-2xl shadow-2xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Earnings Calculator</span>
+<span class="text-status-success font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span> Live Index
+            </span>
+</div>
+<div class="flex gap-2 p-1 rounded-lg bg-surface-container-low mb-space-md" id="estimatorTabs">
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md rounded-md bg-primary text-on-primary font-bold shadow-sm transition-all" onclick="updateEstimate(this, '45,000', 'Sedan / SUV')">Car</button>
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md rounded-md hover:bg-lavender-subtle text-on-surface-variant font-bold transition-all" onclick="updateEstimate(this, '30,000', 'Motorcycle')">Bike</button>
+<button class="flex-1 py-1.5 text-center font-label-md text-label-md rounded-md hover:bg-lavender-subtle text-on-surface-variant font-bold transition-all" onclick="updateEstimate(this, '18,500', 'Urban Scooter')">Scooter</button>
+</div>
+<div class="text-center py-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estimated Monthly Earnings</span>
+<div class="font-display-lg text-display-lg font-extrabold text-primary my-1" id="earningAmount">₹45,000<span class="text-headline-sm font-normal text-on-surface">/mo</span></div>
+<p class="font-label-sm text-label-sm text-outline" id="earningSub">Based on 14 rental days in San Francisco</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-border-purple-tint flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Paid weekly via Direct Deposit</span>
+<span class="font-bold text-primary cursor-pointer hover:underline">How it works</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RECENTLY ADDED FLEET -->
+<section class="w-full pb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Fresh Arrivals</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Recently Added</h2>
+</div>
+<a class="font-label-lg text-label-lg text-primary hover:text-electric-violet-hover font-bold flex items-center gap-1 group" href="#">
+<span>Browse New Additions</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Unit 1: Rivian R1S Adventure Quad-Motor -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Forest green Rivian R1S adventure quad-motor electric SUV parked in a modern pine-surrounded driveway with twilight lighting accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHTnrl8iAV8rCikfyNEBIU0E8mjxBrGRxAjGYIJz6vOcyKqHJP0Wn91hVTVEFRwCA3Num6IU7sWfrAH3utEkJcMxCXuA_gUf22Pw2KBxfwfVAkUVwRuhaqV7ec3y89c3s-ivgJMs1TMNgU9nU7dj3x_OyjvybDEH6jYQMu-AT9Pco4NTPrWhSNcGbMvrry_w8410U3BlH00ZP0cm-M4cxKiJtsImh9-xxMfjTBlfnS')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-status-success text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">new_releases</span> NEW
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Cars • All-Terrain EV</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-on-surface-variant">(4)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">Rivian R1S Adventure Quad-Motor</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">Mission Bay, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹5,500<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹700/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+<!-- Unit 2: LiveWire ONE Electric -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Matte liquid-black LiveWire ONE all-electric performance motorcycle parked in a concrete loft alleyway with moody violet horizon illumination." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVUZFuO34Wrr9C3kFJhnUv92-6mj_ExpqRHkaIy2RpVHPFRhX0x8ZPuhPdyAYvpmua13SVzigQyb7JBX1crKiCbelRezveD0E-g4Ex7ydrkYnQKiPlAhoqydJif7DwkkzamHDLCnB9FIEyyeqNSWGBC80VPGy0Hs0FncQwKI6wSIGBxI9MwhVVFbCynVku2jjC_WBIKxo3jIVYyMbXmJHLuicigqsyBEUrwXkotHyj')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-status-success text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">new_releases</span> NEW
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Bikes • Electric Cruiser</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-on-surface-variant">(2)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">LiveWire ONE Electric</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">Hayes Valley, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹4,500<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹550/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+<!-- Unit 3: Vespa Elettrica 70 -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-sm shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-alt="Glossy silver Vespa Elettrica 70 with vibrant cyan perimeter pinstripes parked on cobblestone city streets in front of a chic bakery at twilight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_B3yecQ6DCCH5dYdODUSDVmZ7iY0XwBrUdWcoxqWwyABK5W-kg0myE9ox6cF2kjPlDq-vWUnp3ucbk_rLpcDNzQnUMIqPGu0rWfie3QTld6VkK9d6D4CH-AJnafoDVswzDz2ivz6UMv5fbXmjwX66WetnJaiZ_6e7zPIuCegwyOmqh_3LuvJZrFcOdyVCcnJsMQ_IHmeCX0pQNSjzNNsjFrv0JrnfWAS5TjTuxQJ8')"></div>
+<div class="absolute top-space-xs left-space-xs px-2.5 py-1 rounded-full bg-status-success text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">new_releases</span> NEW
+            </div>
+<button class="absolute top-space-xs right-space-xs w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-status-alert transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs mb-1">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Scooters • Classic EV</span>
+<div class="flex items-center gap-1 text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-on-surface-variant">(8)</span>
+</div>
+</div>
+<h3 class="px-space-xs font-title-md text-title-md font-bold text-on-surface truncate">Vespa Elettrica 70</h3>
+<div class="px-space-xs flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm my-1">
+<span class="material-symbols-outlined text-[16px] text-outline">pin_drop</span>
+<span class="truncate">North Beach, SF</span>
+</div>
+</div>
+<div class="pt-space-sm px-space-xs mt-space-sm border-t border-border-purple-tint flex items-center justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-none">₹1,499<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<div class="font-label-sm text-label-sm text-outline">₹199/hr hourly rate</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all font-semibold">
+            Details
+          </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function setCategoryTab(btn) {
+    const parent = document.getElementById('categoryTabGroup');
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(b => {
+      b.className = 'px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-surface-container hover:bg-lavender-subtle text-on-surface-variant';
+    });
+    btn.className = 'px-space-md py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-2 bg-primary text-on-primary shadow-md';
+  }
+
+  function updateEstimate(btn, amount, type) {
+    const tabs = document.getElementById('estimatorTabs');
+    const buttons = tabs.querySelectorAll('button');
+    buttons.forEach(b => {
+      b.className = 'flex-1 py-1.5 text-center font-label-md text-label-md rounded-md hover:bg-lavender-subtle text-on-surface-variant font-bold transition-all';
+    });
+    btn.className = 'flex-1 py-1.5 text-center font-label-md text-label-md rounded-md bg-primary text-on-primary font-bold shadow-sm transition-all';
+    
+    document.getElementById('earningAmount').innerHTML = '₹' + amount + '<span class="text-headline-sm font-normal text-on-surface">/mo</span>';
+    document.getElementById('earningSub').textContent = 'Based on 14 rental days for ' + type + ' in San Francisco';
+  }
+</script></main><footer class="w-full px-margin-lg py-space-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-md text-label-md"><span>RentWheels — Your Ride. Your Rules.</span><span>© 2025 RentWheels Inc. All rights reserved.</span></div></footer></div></body></html>

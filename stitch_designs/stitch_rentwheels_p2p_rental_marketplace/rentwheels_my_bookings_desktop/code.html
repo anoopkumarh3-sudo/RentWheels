@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-container":"#605b7d","surface-dim":"#dcd8e5","on-primary-fixed-variant":"#5a00c6","surface-variant":"#e5e0ee","background":"#fcf8ff","tertiary-fixed":"#ecdcff","secondary-fixed-dim":"#c8c2e9","surface-canvas":"#F8FAFC","secondary-fixed":"#e5deff","error-container":"#ffdad6","on-primary-fixed":"#25005a","inverse-primary":"#d2bbff","tertiary-fixed-dim":"#d1beee","lavender-subtle":"#EDE9FE","status-success":"#10B981","secondary-container":"#dcd5fd","on-tertiary":"#ffffff","surface-container":"#f0ecf9","outline-variant":"#ccc3d8","surface-bright":"#fcf8ff","on-tertiary-fixed":"#221439","inverse-on-surface":"#f3effc","surface-container-highest":"#e5e0ee","electric-violet-hover":"#6D28D9","on-surface":"#1c1a24","border-purple-tint":"#E9E5F5","surface-container-lowest":"#ffffff","tertiary-container":"#6f5f89","primary":"#630ed4","on-tertiary-container":"#eee0ff","surface-card":"#FFFFFF","tertiary":"#56476f","border-subtle":"#E2E8F0","outline":"#7b7487","secondary":"#5f5a7c","on-error-container":"#93000a","surface-tint":"#732ee4","surface":"#fcf8ff","surface-container-low":"#f6f1ff","on-secondary":"#ffffff","on-tertiary-fixed-variant":"#4e4067","on-secondary-fixed":"#1b1735","primary-fixed":"#eaddff","primary-container":"#7c3aed","primary-fixed-dim":"#d2bbff","on-surface-variant":"#4a4455","on-background":"#1c1a24","on-primary-container":"#ede0ff","electric-violet-bright":"#8B5CF6","surface-container-high":"#ebe6f4","status-alert":"#E11D48","on-error":"#ffffff","error":"#ba1a1a","inverse-surface":"#312f39","on-primary":"#ffffff","on-secondary-fixed-variant":"#474363"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","margin-sm":"1rem","gutter-sm":"1rem","space-xl":"2.5rem","margin":"2rem","margin-lg":"4rem","space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-[250px] bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs pt-space-xs"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-[0_2px_8px_-2px_rgba(30,16,53,0.04),0_1px_3px_0_rgba(124,58,237,0.03)]"><span class="material-symbols-outlined text-[24px]">directions_car</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-extrabold tracking-tight">RentWheels</span><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Mobility Club</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[0_4px_14px_rgba(124,58,237,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Home</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="explore-vehicles" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span>Explore Vehicles</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="list-your-vehicle" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>List Your Vehicle</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary font-bold shadow-[0_4px_14px_rgba(124,58,237,0.35)]" data-path="my-bookings" href="#"><span class="material-symbols-outlined text-on-primary text-[20px]">calendar_today</span><span class="text-on-primary">My Bookings</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="rental-requests" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span>Rental Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-lavender-subtle hover:text-on-surface transition-all" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span>My Profile</span></a></nav></div><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between shadow-[0_2px_8px_-2px_rgba(30,16,53,0.04)]"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-9 h-9 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface truncate">Alex Morgan</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Verified Host & Driver</span></div></div><a class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface transition-colors flex-shrink-0" data-path="sign-out" href="#"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></aside><div class="pl-[250px] min-h-screen flex flex-col justify-between"><header class="h-16 w-full bg-surface-container-lowest/80 backdrop-blur-md px-margin-lg flex items-center justify-between sticky top-0 z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm flex-1 max-w-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md rounded-lg bg-surface-container-low border-0 text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container/20" placeholder="Search vehicles, bookings, locations..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-electric-violet-bright ring-2 ring-surface-container-lowest"></span></button><button aria-label="Help & Support" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-[1px] bg-outline-variant/30 mx-space-xs"></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">AM</div><span class="font-label-lg text-label-lg text-on-surface font-semibold hidden md:inline">Alex</span></div></div></header><main class="w-full px-margin-lg pt-space-md pb-space-xl flex-1"><div class="flex flex-col w-full">
+<!-- Interactive View Switcher / Prototype Simulation Floating Strip -->
+<div class="mb-space-lg p-space-sm bg-surface-container-low rounded-xl flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-electric-violet-bright animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Interactive Prototype States:</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs" id="state-toggles">
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold" id="btn-view-default" onclick="switchView('default')">Active Bookings View</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-lavender-subtle hover:text-primary font-medium" id="btn-view-empty" onclick="switchView('empty')">Empty State View</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-lavender-subtle hover:text-primary font-medium flex items-center gap-1" onclick="toggleModal('cancel-modal', true)">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Preview Cancellation Modal</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-lavender-subtle hover:text-primary font-medium flex items-center gap-1" onclick="toggleDrawer(true)">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>Preview Keyless Pass Drawer</span>
+</button>
+</div>
+</div>
+<!-- Breadcrumbs & Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">RentWheels</a>
+<span class="text-outline-variant font-bold">/</span>
+<a class="hover:text-primary transition-colors" href="#">My Account</a>
+<span class="text-outline-variant font-bold">/</span>
+<span class="text-primary font-bold">My Bookings</span>
+</nav>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">My Bookings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage, view keyless passes, and track all your peer-to-peer vehicle reservations.</p>
+</div>
+<!-- Quick Action CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-12 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all flex items-center gap-space-xs shadow-sm hover:shadow-md">
+<span class="material-symbols-outlined text-[20px] text-primary">download</span>
+<span>Download GST Invoices</span>
+</button>
+<a class="h-12 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-electric-violet-hover transition-all flex items-center gap-space-xs shadow-md hover:shadow-lg active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Book Another Ride</span>
+</a>
+</div>
+</div>
+<!-- BOOKING SUMMARY KPIS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Total Bookings -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-11 h-11 rounded-xl bg-lavender-subtle text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">directions_car</span>
+</span>
+<span class="px-space-xs py-0.5 rounded-full bg-lavender-subtle text-primary font-label-sm text-label-sm font-bold">+2 this month</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">12</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Total Bookings</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Lifetime verified rentals</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-primary/5 group-hover:scale-125 transition-transform"></div>
+</div>
+<!-- Card 2: Pending Bookings -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">hourglass_top</span>
+</span>
+<span class="px-space-xs py-0.5 rounded-full bg-amber-100 text-amber-800 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+          Awaiting Host
+        </span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">1</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Pending Approval</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Host response in < 2 hrs</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-amber-500/5 group-hover:scale-125 transition-transform"></div>
+</div>
+<!-- Card 3: Approved Bookings -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</span>
+<span class="px-space-xs py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-bold">Confirmed</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">2</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Approved / Upcoming</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ready for instant pickup</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-emerald-500/5 group-hover:scale-125 transition-transform"></div>
+</div>
+<!-- Card 4: Completed Bookings -->
+<div class="p-space-lg bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">flag</span>
+</span>
+<span class="px-space-xs py-0.5 rounded-full bg-sky-100 text-sky-800 font-label-sm text-label-sm font-bold">100% Return Rate</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface">8</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Completed</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">All deposits settled</p>
+<div class="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-sky-500/5 group-hover:scale-125 transition-transform"></div>
+</div>
+</div>
+<!-- FILTERS & SEARCH CONTROL PANEL -->
+<div class="p-space-md bg-surface-container-lowest rounded-2xl shadow-sm mb-space-lg flex flex-col gap-space-md">
+<!-- Horizontal Filter Pills with Counts -->
+<div class="flex flex-wrap items-center gap-space-xs overflow-x-auto pb-1" id="filter-pills">
+<button class="h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5 filter-btn active" data-filter="all" onclick="filterBy('all')">
+<span>All Bookings</span>
+<span class="bg-surface-container-lowest/20 text-on-primary px-1.5 py-0.2 rounded-full text-[10px]">12</span>
+</button>
+<button class="h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn" data-filter="pending" onclick="filterBy('pending')">
+<span>Pending</span>
+<span class="bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded-full text-[10px] font-bold">1</span>
+</button>
+<button class="h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn" data-filter="approved" onclick="filterBy('approved')">
+<span>Approved</span>
+<span class="bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded-full text-[10px] font-bold">2</span>
+</button>
+<button class="h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn" data-filter="completed" onclick="filterBy('completed')">
+<span>Completed</span>
+<span class="bg-sky-100 text-sky-800 px-1.5 py-0.2 rounded-full text-[10px] font-bold">8</span>
+</button>
+<button class="h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn" data-filter="cancelled" onclick="filterBy('cancelled')">
+<span>Cancelled</span>
+<span class="bg-surface-variant text-on-surface-variant px-1.5 py-0.2 rounded-full text-[10px] font-bold">1</span>
+</button>
+<button class="h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn" data-filter="rejected" onclick="filterBy('rejected')">
+<span>Rejected</span>
+<span class="bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-full text-[10px] font-bold">0</span>
+</button>
+</div>
+<!-- Search Input, Date Range & Sort Dropdowns -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm pt-space-xs">
+<div class="md:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-space-md bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container/30 placeholder:text-on-surface-variant" id="booking-search" oninput="handleSearch()" placeholder="Search by vehicle name, booking ID (e.g. RW-2025-8941)..." type="text"/>
+</div>
+<div class="md:col-span-3 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">calendar_month</span>
+<select class="w-full h-11 pl-11 pr-space-lg bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container/30 appearance-none cursor-pointer">
+<option>Last 6 Months</option>
+<option>Year 2025</option>
+<option>Year 2024</option>
+<option>All-Time Archive</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<div class="md:col-span-3 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">sort</span>
+<select class="w-full h-11 pl-11 pr-space-lg bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container/30 appearance-none cursor-pointer">
+<option>Sort: Newest First</option>
+<option>Sort: Oldest First</option>
+<option>Sort: Price: High to Low</option>
+<option>Sort: Price: Low to High</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- BOOKINGS CONTAINER (DEFAULT VIEW) -->
+<div class="flex flex-col gap-space-lg" id="view-active-bookings">
+<!-- CARD 1: Hyundai Creta SX(O) - APPROVED -->
+<div class="booking-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col xl:flex-row group" data-category="approved" data-search="hyundai creta sx(o) rw-2025-8941 rahul sharma bangalore indiranagar">
+<!-- Vehicle Media Column -->
+<div class="xl:w-80 h-56 xl:h-auto relative flex-shrink-0 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pristine white 2024 Hyundai Creta SX(O) compact SUV parked in an urban architectural driveway during golden hour, ultra-realistic automotive studio photography, showcasing high-gloss metallic paint, sleek alloy wheels, and signature LED daylight running lights in crisp 8k resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdbEuTQNpQW8l-QABKfhAzIJvtzxuJGdFefu0yIkaAbixu2zSDLF22bfGmpCUbqtbpzVbTK3iLxtohyvcczyzrE2YWlOtkMaVc3NZ_ezyzLz4CLG0pyE6-x-YQtuTEvi9Agc4R0jDlFthe9X37s62-7-YgQPHaw9rgrRfXSTmfTGGoRyeqc3b2E0x3I5bWODIPD_GngFUtAwk5oSoJoHaiZH_IBNZmf945fTMCipA-"/>
+<div class="absolute top-3 left-3 bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-electric-violet-bright">bolt</span>
+<span>Instant Keyless Hub Pickup</span>
+</div>
+</div>
+<!-- Main Info & Schedule Column -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<!-- Top Row: Identifiers, Status & Host -->
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-primary bg-lavender-subtle px-2.5 py-0.5 rounded-md flex items-center gap-1">
+<span>#RW-2025-8941</span>
+<button class="hover:text-electric-violet-hover" onclick="copyToClipboard('RW-2025-8941')" title="Copy Booking ID">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Booked on Oct 24, 2025</span>
+</div>
+<!-- Approved Status Pill -->
+<div class="px-space-md py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-md text-label-md font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">check_circle</span>
+<span>Approved & Confirmed</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Hyundai Creta SX(O) 2024</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold mt-0.5">Compact SUV • Automatic (IVT) • Petrol • Sunroof</p>
+</div>
+<!-- Host profile snippet -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-xl">
+<div class="w-7 h-7 rounded-full bg-primary/20 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">RS</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold leading-tight">Rahul Sharma</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-amber-500">star</span> 4.96 (Superhost)
+                </span>
+</div>
+<a class="ml-1 text-primary hover:text-electric-violet-hover p-1 rounded-md" href="#" title="Message Host">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Schedule & Trip Logistics Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">flight_takeoff</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Pickup</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Sat, Oct 28 • 10:00 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Indiranagar Smart Hub (Bay 4B)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">flight_land</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Return</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Mon, Oct 30 • 06:00 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2 Days, 8 Hours (56h total)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">lock_open</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Access Mode</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Keyless Digital Pass</span>
+<span class="font-body-sm text-body-sm text-emerald-700 font-semibold">Active in 3 days</span>
+</div>
+</div>
+</div>
+<!-- Financial Breakdown & Actions Footer -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total Paid via Razorpay UPI</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹5,069</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(Incl. ₹2,000 Ref. Deposit)</span>
+</div>
+</div>
+<div class="hidden sm:block h-8 w-px bg-outline-variant/30"></div>
+<div class="hidden sm:flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cancellation Policy</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold">100% Free Refund till Oct 28, 4 AM</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-lg text-rose-600 hover:bg-rose-50 font-label-lg text-label-lg transition-colors" onclick="toggleModal('cancel-modal', true)">
+              Cancel Booking
+            </button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all flex items-center gap-1.5" onclick="window.open('https://maps.google.com', '_blank')">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span>Directions</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-electric-violet-hover transition-all flex items-center gap-1.5 shadow-md active:scale-95" onclick="toggleDrawer(true)">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>View Keyless Pass</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Royal Enfield Classic 350 - PENDING -->
+<div class="booking-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col xl:flex-row group" data-category="pending" data-search="royal enfield classic 350 reborn rw-2025-9012 vikram rathore koramangala bangalore bike">
+<!-- Vehicle Media Column -->
+<div class="xl:w-80 h-56 xl:h-auto relative flex-shrink-0 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stealth dark matte black and chrome Royal Enfield Classic 350 motorcycle parked in a luxury contemporary architectural courtyard, premium cinematic motorcycle photography with moody lighting and deep contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoTjtPUNR0dQv_DTHJ8V2vjW4JIXVxLVkrY7CTT3QimeCEVR_g148WvUm3ZcHe57WPiGSwBjWCAwIbJinNGBjo2q2hstVAep-YXv9tFzS7h8zZXSTbHQCThpoxCOQ-YHBUc2DeMiHjJp1OtUX6Pl0MS5DYsOaYRkqlnBeE8LIxvsN-M1I0JG4fbUOozjmJ_BIROsXy3qddDYhQfjNNyRuFtTwwaFbowEyiLs0us_eH"/>
+<div class="absolute top-3 left-3 bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-400">local_shipping</span>
+<span>Doorstep Delivery Requested</span>
+</div>
+</div>
+<!-- Main Info & Schedule Column -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<!-- Top Row -->
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-primary bg-lavender-subtle px-2.5 py-0.5 rounded-md flex items-center gap-1">
+<span>#RW-2025-9012</span>
+<button class="hover:text-electric-violet-hover" onclick="copyToClipboard('RW-2025-9012')" title="Copy Booking ID">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Booked on Oct 25, 2025</span>
+</div>
+<!-- Pending Status Pill with Glowing Dot -->
+<div class="px-space-md py-1 rounded-full bg-amber-100 text-amber-900 font-label-md text-label-md font-bold flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+<span>Pending Host Approval</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Royal Enfield Classic 350 Reborn</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold mt-0.5">Bikes • Modern Classic • 350cc • Dual-Channel ABS</p>
+</div>
+<!-- Host Details -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1.5 rounded-xl">
+<div class="w-7 h-7 rounded-full bg-primary/20 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">VR</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold leading-tight">Vikram Rathore</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px] text-amber-500">star</span> 4.88 (Verified Host)
+                </span>
+</div>
+<a class="ml-1 text-primary hover:text-electric-violet-hover p-1 rounded-md" href="#" title="Message Host">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Schedule Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">calendar_today</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Pickup Window</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Fri, Nov 07 • 09:00 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Koramangala 5th Block, Bangalore</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">schedule</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Return Window</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Sat, Nov 08 • 09:00 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 Day, 12 Hours (36h duration)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">delivery_dining</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Fulfillment</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Doorstep Delivery</span>
+<span class="font-body-sm text-body-sm text-amber-700 font-semibold">+₹199 applied</span>
+</div>
+</div>
+</div>
+<!-- Financial & Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Authorized via Razorpay Hold</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹1,999</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(₹800 Rental + ₹1,000 Ref. Deposit + ₹199 Delivery)</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-lg text-rose-600 hover:bg-rose-50 font-label-lg text-label-lg transition-colors" onclick="alert('Booking request #RW-2025-9012 withdrawn successfully. Authorization hold released.')">
+              Withdraw Request
+            </button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Message Host</span>
+</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all flex items-center gap-1.5" onclick="toggleDrawer(true)">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: Honda Activa 6G - COMPLETED -->
+<div class="booking-card bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col xl:flex-row group" data-category="completed" data-search="honda activa 6g dlx rw-2025-7823 indiranagar bangalore scooter">
+<!-- Vehicle Media Column -->
+<div class="xl:w-80 h-56 xl:h-auto relative flex-shrink-0 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean modern pearl white Honda Activa 6G scooter photographed outdoors under bright daylight in Bangalore, showing polished finish, front chrome styling, and clear mirror details in ultra-sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDE-nChfJT3c0nPZeaf4V9tK9nTcIUzQXIYRW3UazOqI7lAiW6-79GH4QMMlkF6U0V24AGmfDtn9SSILurG56i34nhlTMsYL9ZgjJvp111aT5T5pobriiVHxT-xV-nXnEiBr8iV40rDVZLTzaeaTOCRfk28Zudc_U8B1RZFpMcV_5HPR05csJ7A4xMQcb1DI-DpKxa01CLwImN2hi0FiU_G8Q8FSgUzFMtMwBHIyZn"/>
+<div class="absolute top-3 left-3 bg-inverse-surface/85 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-sky-400">done_all</span>
+<span>Inspected & Returned</span>
+</div>
+</div>
+<!-- Main Info & Schedule Column -->
+<div class="p-space-lg flex-1 flex flex-col justify-between gap-space-md">
+<!-- Top Row -->
+<div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-primary bg-lavender-subtle px-2.5 py-0.5 rounded-md flex items-center gap-1">
+<span>#RW-2025-7823</span>
+<button class="hover:text-electric-violet-hover" onclick="copyToClipboard('RW-2025-7823')" title="Copy Booking ID">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">• Trip concluded Oct 15, 2025</span>
+</div>
+<!-- Completed Status Pill -->
+<div class="px-space-md py-1 rounded-full bg-sky-100 text-sky-900 font-label-md text-label-md font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-sky-600">task_alt</span>
+<span>Trip Completed</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Honda Activa 6G DLX</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold mt-0.5">Scooters • Automatic • 110cc • BS-VI Compliant</p>
+</div>
+<!-- Star rating completed badge -->
+<div class="flex items-center gap-1 text-amber-500 font-label-md text-label-md bg-amber-50 px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span class="text-on-surface font-bold ml-1">Rated 5.0</span>
+</div>
+</div>
+</div>
+<!-- Schedule Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">history</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Trip Duration</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Oct 14 – Oct 15, 2025</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24 Hours Total (Odo: 84 km)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">pin_drop</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Location</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Indiranagar Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Handover successfully recorded</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-emerald-600 text-[20px] mt-0.5">check_circle</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold block">Security Deposit</span>
+<span class="font-label-lg text-label-lg font-bold text-emerald-700 block">₹1,000 Refunded</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Settled to UPI on Oct 16</span>
+</div>
+</div>
+</div>
+<!-- Financial & Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pt-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Net Rental Cost</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">₹500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(GST Invoiced • #INV-7823)</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all flex items-center gap-1.5" onclick="alert('Downloading GST Tax Invoice for #RW-2025-7823 (PDF)...')">
+<span class="material-symbols-outlined text-[18px] text-primary">picture_as_pdf</span>
+<span>Invoice & Tax Receipt</span>
+</button>
+<a class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-electric-violet-hover transition-all flex items-center gap-1.5 shadow-md active:scale-95" href="#">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Book Again</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- EMPTY STATE CONTAINER (Hidden by default, toggled via prototype strip) -->
+<div class="hidden flex-col items-center justify-center p-space-xl bg-surface-container-lowest rounded-3xl shadow-sm text-center max-w-2xl mx-auto my-space-lg" id="view-empty-state">
+<div class="w-24 h-24 rounded-full bg-lavender-subtle text-primary flex items-center justify-center mb-space-md shadow-inner">
+<span class="material-symbols-outlined text-[48px]">calendar_today</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-space-xs">You haven't booked any vehicles yet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-space-lg">
+      Discover curated cars, bikes, and scooters across Bangalore and top Indian cities with instant keyless unlock and zero paperwork.
+    </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm">
+<a class="h-12 px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-electric-violet-hover transition-all flex items-center gap-space-xs shadow-md active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Explore Vehicles</span>
+</a>
+<button class="h-12 px-space-md rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all" onclick="switchView('default')">
+        Switch Back to Active View
+      </button>
+</div>
+</div>
+<!-- KEYLESS PASS & DIGITAL HANDOVER MODAL / DRAWER -->
+<div class="fixed inset-0 z-50 flex justify-end bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300 hidden opacity-0" id="pass-drawer">
+<div class="w-full max-w-xl h-full bg-surface-container-lowest shadow-2xl flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300" id="drawer-panel">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between border-b border-border-purple-tint">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">vpn_key</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Digital Keyless Trip Pass</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Booking #RW-2025-8941</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center hover:bg-lavender-subtle transition-colors" onclick="toggleDrawer(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Body -->
+<div class="p-space-lg flex flex-col gap-space-lg flex-1">
+<!-- Vehicle Card Summary -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded-xl">
+<div class="w-20 h-16 rounded-lg bg-cover bg-center overflow-hidden flex-shrink-0" data-alt="High resolution studio side profile of modern 2024 Hyundai Creta SX(O) SUV in white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCu65-4mfG0Vm_Qk8ESk7-FuE4XEkwANzUNoUNFm_2akDjXg3KPSks0ugr05O-4aA2Cf6Vd41k-ZVhffXZeY3_BPjJGm1DV04EGzINaKGd3H3x3uSiIVvGIAu1cABUmXwzdbR_7O5oPFDvkSyBVXLWx0lXRqNnV7y0pfTVRZvzMwDH2DDz-D8KewqOik1OTBK7SVHps09LBJ7HgPyLSwEJ9cI3i6mypBTceQAbUQPNI')"></div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Hyundai Creta SX(O) 2024</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">KA 03 MX 4920 • Indiranagar Bay 4B</span>
+<span class="font-label-sm text-label-sm text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Connected & Ready
+            </span>
+</div>
+</div>
+<!-- Digital Key Pass QR -->
+<div class="p-space-lg bg-surface-container-low rounded-2xl flex flex-col items-center text-center shadow-inner">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold mb-space-xs">Keyless Access Bluetooth QR</span>
+<!-- Inline Stylized QR Representation -->
+<div class="w-48 h-48 bg-surface-container-lowest p-3 rounded-2xl shadow-sm flex items-center justify-center relative group">
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<path d="M10,10 h30 v30 h-30 z M16,16 v18 h18 v-18 z M22,22 h6 v6 h-6 z M60,10 h30 v30 h-30 z M66,16 v18 h18 v-18 z M72,22 h6 v6 h-6 z M10,60 h30 v30 h-30 z M16,66 v18 h18 v-18 z M22,72 h6 v6 h-6 z M50,10 h6 v15 h-6 z M50,30 h6 v6 h-6 z M60,50 h15 v6 h-15 z M80,50 h10 v15 h-10 z M50,60 h6 v30 h-6 z M65,65 h10 v10 h-10 z M80,80 h10 v10 h-10 z M60,85 h15 v6 h-15 z M35,45 h10 v6 h-10 z M15,48 h12 v6 h-12 z"></path>
+</svg>
+<div class="absolute inset-0 bg-primary-container/90 rounded-2xl flex flex-col items-center justify-center text-on-primary opacity-0 group-hover:opacity-100 transition-opacity p-2 text-center">
+<span class="material-symbols-outlined text-[32px] mb-1">bluetooth_searching</span>
+<span class="font-label-md text-label-md font-bold">Tap to sync Bluetooth Key</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Hold your phone within 5 meters of Bay 4B to auto-unlock vehicle doors.</p>
+</div>
+<!-- Vehicle Checklist & Inspection Info -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md font-bold text-on-surface">Digital Handover Checklist</span>
+<div class="space-y-space-xs">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">battery_charging_full</span>
+<span>Fuel Gauge Level</span>
+</span>
+<span class="font-bold text-on-surface">100% Full (Return at 100%)</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<span>Starting Odometer</span>
+</span>
+<span class="font-bold text-on-surface">14,210 km</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera</span>
+<span>Pre-Trip Walkaround Photos</span>
+</span>
+<span class="text-primary font-bold cursor-pointer hover:underline">Upload 4 Photos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="p-space-lg bg-surface-container-low border-t border-border-purple-tint flex items-center justify-between gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all" onclick="toggleDrawer(false)">Close</button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-electric-violet-hover transition-all flex items-center gap-1.5 shadow-md" onclick="alert('Digital pass sent to your registered WhatsApp (+91 98765 43210)')">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+<span>Send Pass to WhatsApp</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CANCELLATION MODAL PREVIEW -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300 hidden opacity-0 p-space-md" id="cancel-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl p-space-lg flex flex-col gap-space-md">
+<!-- Modal Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Cancel Booking #RW-2025-8941?</h3>
+<span class="font-label-sm text-label-sm text-emerald-700 font-semibold">100% Free Cancellation applies</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleModal('cancel-modal', false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="flex flex-col gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Since you are cancelling more than 6 hours prior to scheduled pickup (Sat, Oct 28, 10:00 AM), full refund of <strong class="text-on-surface">₹5,069</strong> will be refunded to your original payment mode (Razorpay UPI) within 2-4 business hours.
+        </p>
+<div class="flex flex-col gap-1.5 mt-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Please select a reason for cancellation:</label>
+<select class="w-full h-11 px-space-md bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container/30 cursor-pointer">
+<option>Change of travel plans</option>
+<option>Found an alternative vehicle / cheaper ride</option>
+<option>Host requested cancellation</option>
+<option>Emergency / Health issue</option>
+<option>Other reasons</option>
+</select>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-lavender-subtle transition-all" onclick="toggleModal('cancel-modal', false)">
+          Keep Booking
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-rose-600 text-white font-label-lg text-label-lg hover:bg-rose-700 transition-all shadow-md active:scale-95" onclick="confirmCancel()">
+          Confirm Cancellation
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text);
+      alert('Booking ID #' + text + ' copied to clipboard!');
+    }
+
+    function switchView(viewName) {
+      const activeContainer = document.getElementById('view-active-bookings');
+      const emptyContainer = document.getElementById('view-empty-state');
+      const btnDefault = document.getElementById('btn-view-default');
+      const btnEmpty = document.getElementById('btn-view-empty');
+
+      if (viewName === 'empty') {
+        activeContainer.classList.add('hidden');
+        emptyContainer.classList.remove('hidden');
+        emptyContainer.classList.add('flex');
+
+        btnEmpty.className = "px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold";
+        btnDefault.className = "px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-lavender-subtle hover:text-primary font-medium";
+      } else {
+        emptyContainer.classList.add('hidden');
+        emptyContainer.classList.remove('flex');
+        activeContainer.classList.remove('hidden');
+
+        btnDefault.className = "px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-primary-container text-on-primary shadow-sm font-semibold";
+        btnEmpty.className = "px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-lavender-subtle hover:text-primary font-medium";
+      }
+    }
+
+    function filterBy(status) {
+      // Toggle button active classes
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === status) {
+          btn.className = "h-9 px-space-md rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5 filter-btn active";
+        } else {
+          btn.className = "h-9 px-space-md rounded-full bg-surface-container-low text-on-surface-variant hover:bg-lavender-subtle hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 filter-btn";
+        }
+      });
+
+      // Filter cards
+      const cards = document.querySelectorAll('.booking-card');
+      cards.forEach(card => {
+        if (status === 'all') {
+          card.style.display = 'flex';
+        } else {
+          if (card.getAttribute('data-category') === status) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    function handleSearch() {
+      const query = document.getElementById('booking-search').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.booking-card');
+
+      cards.forEach(card => {
+        const searchText = card.getAttribute('data-search') || '';
+        if (searchText.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function toggleModal(modalId, show) {
+      const modal = document.getElementById(modalId);
+      if (show) {
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+      } else {
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 200);
+      }
+    }
+
+    function toggleDrawer(show) {
+      const drawer = document.getElementById('pass-drawer');
+      const panel = document.getElementById('drawer-panel');
+
+      if (show) {
+        drawer.classList.remove('hidden');
+        setTimeout(() => {
+          drawer.classList.remove('opacity-0');
+          panel.classList.remove('translate-x-full');
+        }, 10);
+      } else {
+        panel.classList.add('translate-x-full');
+        drawer.classList.add('opacity-0');
+        setTimeout(() => drawer.classList.add('hidden'), 300);
+      }
+    }
+
+    function confirmCancel() {
+      toggleModal('cancel-modal', false);
+      alert('Booking #RW-2025-8941 has been cancelled. Refund of ₹5,069 initiated to your UPI account.');
+    }
+  </script>
+</div></main><footer class="w-full px-margin-lg py-space-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-md text-label-md"><span>RentWheels — Your Ride. Your Rules.</span><span>© 2025 RentWheels Inc. All rights reserved.</span></div></footer></div></body></html>
