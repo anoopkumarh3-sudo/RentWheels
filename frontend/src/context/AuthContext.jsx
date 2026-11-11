@@ -16,6 +16,41 @@ export function AuthProvider({ children }) {
     }
 
     try {
+      // Calculate dynamic host earnings & trips from bookings on user's vehicles
+      let userTotalEarnings = 0
+      let userTotalTrips = 0
+      let userTotalHours = 0
+
+      try {
+        const { data: userVehicles } = await supabase
+          .from('vehicles')
+          .select('id')
+          .eq('owner_id', authUserId)
+
+        if (userVehicles && userVehicles.length > 0) {
+          const vIds = userVehicles.map(v => v.id)
+          const { data: hostBookings } = await supabase
+            .from('bookings')
+            .select('id, total_amount, total_hours, booking_status, payment_status')
+            .in('vehicle_id', vIds)
+
+          if (hostBookings) {
+            const countedBookingIds = new Set()
+            hostBookings.forEach(b => {
+              if (countedBookingIds.has(b.id)) return
+              countedBookingIds.add(b.id)
+              if (b.payment_status === 'paid' || b.booking_status === 'approved') {
+                userTotalEarnings += Number(b.total_amount || 0)
+                userTotalTrips += 1
+                userTotalHours += Number(b.total_hours || 0)
+              }
+            })
+          }
+        }
+      } catch (calcErr) {
+        console.warn('Profile host earnings computation note:', calcErr)
+      }
+
       const { data, error } = await supabase
         .from('profiles')
         .select('*')
@@ -32,9 +67,9 @@ export function AuthProvider({ children }) {
           role_title: 'Verified Host & Driver',
           member_since: new Date(data.created_at || Date.now()).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' }),
           rating: 0,
-          total_trips: 0,
-          total_rental_hours: 0,
-          total_earnings: 0
+          total_trips: userTotalTrips,
+          total_rental_hours: userTotalHours,
+          total_earnings: userTotalEarnings
         }
         setProfile(loadedProfile)
         return loadedProfile

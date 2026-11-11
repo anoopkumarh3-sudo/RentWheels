@@ -18,7 +18,7 @@ export default function DashboardPage() {
   const [recentActivities, setRecentActivities] = useState([])
   const [loading, setLoading] = useState(false)
 
-  // Fetch real counts from Supabase if logged in
+  // Fetch real counts & host earnings from Supabase if logged in
   useEffect(() => {
     async function loadAccountData() {
       if (!user?.id) {
@@ -36,25 +36,102 @@ export default function DashboardPage() {
 
       setLoading(true)
       try {
-        // Fetch user's listings count from Supabase
-        const { count: listingsCount } = await supabase
+        // 1. Fetch user's listings from Supabase
+        const { data: myListings, count: listingsCount } = await supabase
           .from('vehicles')
-          .select('*', { count: 'exact', head: true })
+          .select('id, brand, model, daily_price, hourly_price', { count: 'exact' })
           .eq('owner_id', user.id)
 
-        // Fetch user's bookings count from Supabase
-        const { count: bookingsCount } = await supabase
+        const myVehicleIds = (myListings || []).map(v => v.id)
+        const myVehicleMap = {}
+        ;(myListings || []).forEach(v => {
+          myVehicleMap[v.id] = `${v.brand} ${v.model}`
+        })
+
+        // 2. Fetch bookings for this owner's vehicles (Strictly vehicle owner earnings)
+        let hostEarnings = 0
+        let hostRentalHours = 0
+        let pendingRequestsCount = 0
+        const hostActivities = []
+
+        if (myVehicleIds.length > 0) {
+          const { data: hostBookings, error: hostErr } = await supabase
+            .from('bookings')
+            .select('*')
+            .in('vehicle_id', myVehicleIds)
+            .order('created_at', { ascending: false })
+
+          if (!hostErr && hostBookings) {
+            // Deduplicate by booking id for guaranteed idempotency
+            const processedIds = new Set()
+
+            hostBookings.forEach(b => {
+              if (processedIds.has(b.id)) return
+              processedIds.add(b.id)
+
+              const isPaid = b.payment_status === 'paid' || b.booking_status === 'approved'
+              const amount = Number(b.total_amount || 0)
+              const hours = Number(b.total_hours || 0)
+              const vName = myVehicleMap[b.vehicle_id] || 'Your vehicle'
+
+              if (isPaid) {
+                hostEarnings += amount
+                hostRentalHours += hours
+                hostActivities.push({
+                  title: `Rental Earning: ₹${amount.toLocaleString('en-IN')}`,
+                  description: `Booking payment received for ${vName} (${hours} hrs) • Ref: RW-${b.id?.slice(0, 8).toUpperCase()}`,
+                  timestamp: b.updated_at || b.created_at
+                })
+              } else if (b.booking_status === 'requested' || b.booking_status === 'pending') {
+                pendingRequestsCount += 1
+                hostActivities.push({
+                  title: `New Rental Request: ${vName}`,
+                  description: `Booking requested for ${hours} hrs (₹${amount.toLocaleString('en-IN')}) • Pending approval`,
+                  timestamp: b.created_at
+                })
+              }
+            })
+          }
+        }
+
+        // 3. Fetch user's bookings count and activities as a renter
+        const { data: renterBookings, count: bookingsCount } = await supabase
           .from('bookings')
-          .select('*', { count: 'exact', head: true })
+          .select('*, vehicles(brand, model)', { count: 'exact' })
           .eq('renter_id', user.id)
+          .order('created_at', { ascending: false })
+
+        let renterRentalHours = 0
+        const renterActivities = []
+
+        if (renterBookings && renterBookings.length > 0) {
+          renterBookings.forEach(b => {
+            const vName = b.vehicles ? `${b.vehicles.brand} ${b.vehicles.model}` : 'Marketplace vehicle'
+            const hours = Number(b.total_hours || 0)
+            if (b.payment_status === 'paid' || b.booking_status === 'approved') {
+              renterRentalHours += hours
+              renterActivities.push({
+                title: `Trip Confirmed: ${vName}`,
+                description: `Rental reservation for ${hours} hrs • Payment Verified (₹${Number(b.total_amount || 0).toLocaleString('en-IN')})`,
+                timestamp: b.created_at
+              })
+            }
+          })
+        }
+
+        // Combine and sort activities newest first
+        const allActivities = [...hostActivities, ...renterActivities].sort(
+          (a, b) => new Date(b.timestamp || 0) - new Date(a.timestamp || 0)
+        )
 
         setStats({
-          totalEarnings: 0,
+          totalEarnings: hostEarnings, // Only vehicles owned by this user
           activeListingsCount: listingsCount || 0,
-          totalBookingsCount: bookingsCount || 0,
-          rentalHours: 0,
-          pendingRequestsCount: 0
+          totalBookingsCount: bookingsCount || 0, // Bookings made by this user
+          rentalHours: hostRentalHours + renterRentalHours,
+          pendingRequestsCount: pendingRequestsCount
         })
+        setRecentActivities(allActivities.slice(0, 5))
       } catch (err) {
         console.warn('Dashboard data fetch note:', err.message)
       } finally {

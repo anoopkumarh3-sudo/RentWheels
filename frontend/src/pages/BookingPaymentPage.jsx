@@ -493,10 +493,12 @@ export default function BookingPaymentPage() {
     }, 1500)
   }
 
-  // Persist confirmed booking in Supabase PostgreSQL
+  // Persist confirmed booking & verified payment in Supabase PostgreSQL
   const finalizeBookingInSupabase = async (refId, payId, activeVehicle, existingBookingId) => {
     try {
       if (user?.id) {
+        let bookingIdToUse = existingBookingId
+
         if (existingBookingId) {
           // Update existing booking status to approved and paid
           await supabase
@@ -519,15 +521,50 @@ export default function BookingPaymentPage() {
             total_amount: calculation.grandTotal,
             booking_status: 'approved',
             payment_status: 'paid',
-            created_at: new Date().toISOString()
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
           }
 
-          const { error: bookingErr } = await supabase
+          const { data: bData, error: bookingErr } = await supabase
             .from('bookings')
             .insert([bookingPayload])
+            .select()
+            .single()
 
-          if (bookingErr) {
+          if (!bookingErr && bData) {
+            bookingIdToUse = bData.id
+          } else if (bookingErr) {
             console.warn('Booking record insert note:', bookingErr.message)
+          }
+        }
+
+        // Idempotent insertion into payments table (associates payment with booking & vehicle)
+        if (payId) {
+          try {
+            const { data: existingPay } = await supabase
+              .from('payments')
+              .select('id')
+              .eq('razorpay_payment_id', payId)
+              .maybeSingle()
+
+            if (!existingPay) {
+              await supabase
+                .from('payments')
+                .insert([
+                  {
+                    booking_id: bookingIdToUse || null,
+                    razorpay_payment_id: payId,
+                    amount: calculation.grandTotal,
+                    currency: 'INR',
+                    payment_status: 'captured',
+                    payment_method: activePayTab || 'razorpay',
+                    created_at: new Date().toISOString(),
+                    updated_at: new Date().toISOString()
+                  }
+                ])
+            }
+          } catch (payInsertErr) {
+            console.warn('Payment record persistence note:', payInsertErr)
           }
         }
       }
